@@ -57,7 +57,7 @@
 
 /* article content iframe */
 iframe {
-  max-width: 100%;
+  max-width: 100% !important;
 }
 
 .fluid-iframe {
