@@ -1,0 +1,182 @@
+/* video icon */
+.video-icon:before {
+  width: 40px;
+  height: 40px;
+  content: '';
+  position: absolute;
+  background-color: rgba(0,0,0,0.3);
+  background-image: url('../assets/icons/icon-play-white.svg');
+  background-position: center;
+  background-size: 32% auto;
+  background-repeat: no-repeat;
+  z-index: 10;
+  padding: 1em;
+  left: 45%;
+  top: 40%;
+  border-radius: 50%;
+}
+
+/* article content */
+/* base */
+.article-content {
+  padding: 0 1rem;
+}
+
+.article-content hr {
+  margin: 0 0 1rem;
+}
+
+.article-content .view-mobile {
+  display: none;
+}
+
+.article-content .view-desktop {
+  display: none;
+}
+
+/* article content figure */
+.article-content figure {
+  margin: 0 0 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.article-content figure figcaption {
+  text-align: center;
+  padding: 0.3rem 0;
+  font-size: 0.875rem;
+  /* line-height: 1.25rem; */
+  color: #9e9e9e;
+  width: 100%;
+}
+
+.article-content figure img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* article content iframe */
+iframe {
+  max-width: 100%;
+}
+
+.fluid-iframe {
+  padding-top: 56.25%;
+  max-width: 100%;
+  position: relative;
+}
+
+.fluid-iframe iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.view-mobile {
+  display: none;
+}
+
+.view-desktop {
+  padding: 0 1rem 1rem;
+}
+
+/* article content base ends */
+/* dark mode starts */
+.article-content div div {
+  padding-bottom: 1rem;
+  color: white;
+}
+
+.article-content p {
+  padding: 0 0 1rem;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.75rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.article-content p a {
+  color: #ff1339;
+  border-bottom: 0.5px solid #ff1339;
+}
+
+.article-content h2 {
+  /* padding: 0 1rem 1rem; */
+  font-size: 1rem;
+  color: #9e9e9e;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+.article-content h3 {
+  padding: 0 0 1rem;
+  font-size: 1.11rem;
+  color: #ff1339;
+  font-weight: bold;
+}
+
+.article-content ul {
+  padding: 0 0 1rem;
+  color: white;
+  font-size: inherit;
+  list-style: inside;
+}
+
+/* article contents ends */
+
+/* paywall dark mode*/
+.article-transaction:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* background: black; */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 47, 47, 0)), to(rgba(47, 47, 47, 1)));
+  background: -o-linear-gradient(top, rgba(47, 47, 47, 0) 0%, #2F2F2F 100%);
+  background: linear-gradient(to bottom, rgba(47, 47, 47, 0) 0%, #2F2F2F 100%);
+  width: 100%;
+  height: 240px;
+  margin-top: -240px;
+  pointer-events: none;
+}
+
+.overlay {
+  -webkit-transition: visibility 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: visibility 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: visibility 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* paywall dark mode ends */
+
+/* lazy component ad dark mode*/
+.ad-style {
+  margin-bottom: 1rem;
+  border-top: 5px solid #474747;
+  border-bottom: 5px solid #474747;
+  background-color: #2f2f2f;
+}
+
+/* display add to hid ad component before the google ad comes in ios side will detect the ad and then style is switch to display block */
+
+
+/* css for vue carousel */
