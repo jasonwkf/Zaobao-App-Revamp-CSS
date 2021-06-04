@@ -40,6 +40,16 @@
   margin: 0;
 }
 
+.article-content p:empty,
+.article-content h3:empty {
+  display: none;
+}
+
+.article-content p:last-child {
+  padding: 0;
+}
+
+
 .article-content p a {
   color: #a50034;
   border-bottom: 0.5px solid #a50034;
@@ -60,11 +70,18 @@
   font-weight: bold;
 }
 
-.article-content ul {
+.article-content ul, 
+.article-content ol {
   padding: 0 0 1rem;
   color:#5f5f5f;
   font-size: inherit;
   list-style: inside;
+}
+
+.article-content ol li,
+.article-content ul li {
+  padding-bottom: 0.2778rem;
+  line-height: 1.2222rem;
 }
 
 .article-content .view-mobile {

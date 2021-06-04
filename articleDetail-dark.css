@@ -101,6 +101,15 @@ iframe {
   margin: 0;
 }
 
+.article-content p:last-child {
+  padding: 0;
+}
+
+.article-content p:empty,
+.article-content h3:empty {
+  display: none;
+}
+
 .article-content p a {
   color: #ff1339;
   border-bottom: 0.5px solid #ff1339;
@@ -121,13 +130,19 @@ iframe {
   font-weight: bold;
 }
 
-.article-content ul {
+.article-content ul, 
+.article-content ol {
   padding: 0 0 1rem;
-  color: white;
+  color:white;
   font-size: inherit;
   list-style: inside;
 }
 
+.article-content ol li,
+.article-content ul li {
+  padding-bottom: 0.2778rem;
+  line-height: 1.2222rem;
+}
 /* article contents ends */
 
 /* paywall dark mode*/
