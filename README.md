@@ -1,2 +1,2 @@
-# Zaobao-App-Revamp-CSS-Android
-CSS for Android
+# Zaobao-App-Revamp-CSS
+CSS for Android and iOS
