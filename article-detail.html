@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+  <html lang="" id="html" class="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="icon" href="/favicon.ico">
+      <title>Article</title>
+      <script src="./js/intersection-observer.js"></script>
+      <script src="./js/vue.js"></script>
+      <script src='./js/app.js'></script>
+      <script src="./js/moment.min.js"></script>
+      <script src="./js/filter.js"></script>
+      <script src='./js/cards/endingDivider.js'></script>
+      <script src='./js/cards/divider.js'></script>
+      <script src='./js/cards/advertisement.js'></script>
+      <script src='./js/cards/standard.js'></script>
+      <script src='./js/cards/featuredVideo.js'></script>
+      <script src='./js/cards/featured.js'></script>
+      <script src="./js/cards/list-loading.js"></script>
+      <script src='./js/cards/horizontalThumbnailBase.js'></script>
+      <script src='./js/cards/featuredStack.js'></script>
+      <script src='./js/cards/horizontalThumbnail.js'></script>
+      <script src='./js/cards/relatedArticle.js'></script>
+      <script src='./js/cards/paywall.js'></script>
+      <script src="./js/vue-lazyload.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="./js/cards/item-type.js"></script>
+      <link rel="stylesheet" href="./css/tailwind.css" />
+      <!-- <link rel='stylesheet' href='https://www.ah5ivetheband.com/zaobao/css/articleDetail.css'> -->
+      <link rel='stylesheet' href='./css/articleDetail.css'/>
+      <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"/>
+    </head>
+    <body>
+      <div id="article-detail" :class="{ dark: isDark }">
+        <div id='article-detail-container'>
+          <section>
+            <h2 class='text-2xl font-medium leading-tight text-gray-800 dark:text-white pb-2 px-4 pt-4'>社论：下行压力催逼中国经济改革</h2>
+            <div class="mt-1.5 mb-2.5">
+              <a class='text-sm bg-cta ml-4 py-0.5 px-2.5 text-white rounded-2xl'>订户</a>
+            </div>
+            <p class="text-sm text-gray-500 dark:text-gray-300 px-4 leading-relaxed"> 文 / 陈劲禾 </p>
+            <p class="text-sm text-gray-500 dark:text-gray-300 px-4 pb-4 leading-relaxed"> 发布 / 2021年1月22日 3:33 PM </p> 
+            <!-- slider carousel -->
+            <!-- video -->
+            <div id='hero-holder' class='pb-4'>
+              <div class='aspect-w-3 aspect-h-2 bg-gray-100'>
+                <img id='hero-image' src='https://s3-zbdrupal-dev.s3.ap-southeast-1.amazonaws.com/s3fs-public/inline_images/20190326/20190328_showbiz-zhuang-02_Small.jpg' class="object-contain"/>
+                <!-- <itemtype :propsitemtype="'Gallery'"></itemtype> -->
+                  <div class='item-type' ><img class='gallery-icon' src='./assets/icons/galleryIcon.png'/></div>
+              </div>
+              <!-- <carousel :per-page=1 :pagination-enabled=false :navigation-enabled=true>
+                <slide>
+                  <img src='https://picsum.photos/id/10/500/300' class="h-auto w-full"/>
+                </slide>
+                <slide>
+                  <img src='https://picsum.photos/id/24/500/300' class="h-auto w-full"/>
+                </slide>
+                <slide>
+                  <img src='https://picsum.photos/id/566/500/300' class="h-auto w-full"/>
+                </slide>
+                <slide>
+                  <img src='https://picsum.photos/id/331/500/300' class="h-auto w-full"/>
+                </slide>
+              </carousel> -->
+              <!-- brightcove video -->
+              <!-- <div class='relative block max-w-screen'>
+                <div style="padding-top: 56.25%;">
+                  <iframe class="absolute inset-0 w-full h-full" src="https://players.brightcove.net/921483702001/default_default/index.html?videoId=4570583963001" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+                </div>
+              </div> -->
+              <!-- <div id='caption' class='px-4 pt-4 pb-5'>
+                <p class='text-sm text-center font-normal text-gray-500'>中国的改革的成败决定了中国经济的走势，其外溢效应也会影响区域经济。（法新社）</p>
+              </div> -->
+            </div>
+            <!-- article content starts here -->
+            <div id='#article-content' class='article-content'>
+              <div>
+                <p>小六会考今年采用新积分等级制（简称AL），教育部4月公布参考性积分等级截分点与收生成绩范围。</p>
+                <p>不少家长受访时能理解政府出发点，但由于孩子是首批按此系统报考的学生，未知因素太多，仍有家长感到焦虑。</p>
+                <p>教育部的制度调整本意是什么？新积分等级制如何运作？小学生将如何受益？zaobao.sg结合动画、校长和学生家长观点为你仔细讲解。</p>
+                <div
+                    id="43fbe1a1-6d6b-4715-89d7-abb4906cc1a1"
+                    data-type="ads"
+                    data-ads-unit-id="/5908/zbsgapp_iphone/imu1/news"
+                    placement-id="14047271"
+                    data-page="article"
+                    sizes="[300x250,300x600,320x50,320x100]"
+                    class="newshub-container ad-style"
+                    style="height: 286px;"
+                ></div>
+                <div
+                    id="01380d7d-5598-4742-b6c0-ab98c8d840e9"
+                    data-type="ads-tablet"
+                    data-ads-unit-id-tablet="/5908/zbsgapp_ipad/imu1/news"
+                    data-ads-unit-id="/5908/zbsgapp_ipad/imu1/news"
+                    placement-id="20224429"
+                    data-page="article"
+                    sizes="[300x250,300x600,320x50,320x100]"
+                    class="newshub-container"
+                ></div>
+                <p>家长和学生可上<a href="https://www.moe.gov.sg/schoolfinder">教育部网站</a>参考各校截分点与成绩范围。</p>
+                <p><strong>延伸阅读：</strong></p>
+                <ol>
+                    <li><a href="https://www.zaobao.com/news/singapore/story20210428-1142611">今年小六会考采用新积分等级制 各中学截分点与收生成绩范围公布</a></li>
+                    <li><a href="https://www.zaobao.com/news/singapore/story20210428-1142621">虽有助估算孩子选校范围 首批采用新积分等级制不少家长仍焦虑</a></li>
+                </ol>
+                <p><strong>【本文由教育部呈献】</strong></p>
+                <div
+                    id="f7b8330c-8653-4af2-9bce-7edf67b0407f"
+                    data-type="ads-tablet"
+                    data-ads-unit-id-tablet="/5908/zbsgapp_ipad/imu2/news"
+                    data-ads-unit-id="/5908/zbsgapp_ipad/imu2/news"
+                    placement-id="20224429"
+                    data-page="article"
+                    sizes="[300x250,300x600,320x50,320x100]"
+                    class="newshub-container"
+                ></div>
+                <div
+                    id="c040d509-6fbd-4153-b90f-3c44b86f7070"
+                    data-type="ads"
+                    data-ads-unit-id="/5908/zbsgapp_iphone/imu2/news"
+                    placement-id="14047284"
+                    data-page="article"
+                    sizes="[300x250,300x600,320x50,320x100]"
+                    class="newshub-container ad-style"
+                    style="height: 286px;"
+                ></div>
+              </div>
+              <!-- <div class="fluid-iframe">
+                <iframe allowfullscreen="true" frameborder="0" mozallowfullscreen="true" src="//players.brightcove.net/4802324430001/NkXjc3H0l_default/index.html?videoId=6255854023001&amp;muted=true&amp;playsinline=true" webkitallowfullscreen="true"></iframe>
+              </div> -->
+            <div>
+            <!-- <div id='highlight' class=' '>
+              <p class='font-bold pt-4 text-base leading-7 dark:text-gray-500'>实际上，中美第一阶段贸易协议签署次日，中国股市并没有出现股民期待的利好行情，沪深两市小跌约0.5个百分点。</p>
+            </div> -->
+            <!-- relative article start -->
+            <!-- <relatedarticle></relatedarticle> -->
+              <!-- relative article ends -->
+          </section>
+          <!-- paywall starts -->
+          <!-- <section>
+            <paywall></paywall>
+          </section> -->
+          <!-- paywall ends -->
+          <section id='tag-container' class='py-6 px-4 flex flex-wrap'>
+          <!-- tag containers starts -->
+            <div class='mr-2 mb-3'><a href='#' class='bfont-regular rounded-full text-sm text-gray-500 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 dark:text-white'>中国经济增长放缓</a></div>
+            <div class='mr-2 mb-3'><a href='#' class='font-regular rounded-full text-sm text-gray-500 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 dark:text-white'>经济</a></div>
+            <div class='mr-2 mb-3'><a href='#' class='font-regular rounded-full text-sm text-gray-500 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 dark:text-white'>增长放缓</a></div>
+            <div class='mr-2 mb-3'><a href='#' class='font-regular rounded-full text-sm text-gray-500 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 dark:text-white'>经济</a></div>
+          <!-- tag containers ends -->
+          </section>
+          <section>
+            <advertisement :css="{light: '100', dark:900}"></advertisement>
+          </section>
+          <section>
+            <!-- outbrain starts -->
+            <div class='OUTBRAIN' data-src="https://www.zaobao.com.sg/forum/editorial/story20210426-1142137" data-widget-id="MB_1">
+            </div>
+          </section>
+        </div>
+      </div>
+      <script type="text/javascript" async="async" src="https://widgets.outbrain.com/outbrain.js"></script>
+      <script src='./js/article-detail.js'></script>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html lang="" id="html">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Multimedia</title>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="./js/intersection-observer.js"></script>
+      <script src="./js/vue.js"></script>
+      <script src='./js/app.js'></script>
+      <script src="./js/vue-lazyload.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" href="./css/tailwind.css" />
+      <link rel='stylesheet' href='./css/multimedia.css'/>
+    </head>
+    <body>
+      <div id="multimedia" :class="{ dark: isDark }">
+        <div id='multimedia-container' class='dark: '>
+          <div class='aspect-h-1 aspect-w-1 overflow-hidden mb-4' @click="goToListing(feature[0])">
+            <img :src="feature[0].items[0].image" class='object-cover'/>
+            <div class="absolute bottom-0 w-full">
+              <div class='h-full bg-gradient-to-b from-transparent via-transparent to-black'></div>
+                <div class='absolute w-full bottom-4 left-4'>
+                  <h1 class='text-white font-medium text-xl'>{{ feature[0].items[0].title }}</h2>
+                  <p class='text-white font-medium text-xs'>{{ feature[0].sectionTitle }}</p>
+                </div>
+            </div>
+          </div>
+          <div class='section-space' v-for="(item, index) in items" :key="index">
+            <h2 class='section-header text-zaobao-500 font-medium text-lg pl-3.5 dark:text-white'>{{ item.sectionTitle }}</h2>
+            <div class="flex pl-4 space-x-1.5 overflow-x-auto">
+              <div v-for="(article, index) in item.items" :key="index" class="flex-shrink-0 w-4/5 rounded-lg bg-white shadow-sm dark:bg-gray-800"  @click="goToListing(article)">
+                <div class="aspect-w-8 aspect-h-5 relative overflow-hidden rounded-lg">
+                  <img class="object-cover rounded-lg" :src="article.image"/>
+                  <div class="absolute bottom-0 w-full rounded-lg">
+                    <div class="h-2/4 gradient-margin-top bg-gradient-to-b from-transparent to-gray-800 rounded-lg"></div>
+                    <div class="absolute w-full bottom-2 left-2">
+                      <h1 class="mb-1 text-base font-medium leading-tight text-white">{{ article.title }}</h1>
+                      <p class="text-xs text-white">{{ item.sectionTitle }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block w-4 h-4 text-gray-100 dark:text-gray-900">.</div>
+            </div>
+          </div>
+          <h2 class='text-zaobao-500 font-medium mb-4 text-lg pl-3.5 dark:text-white'>{{ feature[1].sectionTitle }}</h2>
+          <div class='aspect-h-1 aspect-w-1 overflow-hidden'  @click="goToListing(feature[1].items[0])">
+            <img :src="feature[1].items[0].image"  class='object-cover'/>
+            <div class="absolute bottom-0 w-full">
+              <div class='h-full bg-gradient-to-b from-transparent via-transparent to-black'></div>
+                <div class='absolute w-full bottom-4 left-4'>
+                  <h1 class='text-white font-medium text-xl'>{{ feature[1].items[0].title }}</h2>
+                  <p class='text-white font-medium text-xs'>{{ feature[1].sectionTitle }}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src='./js/multimedia.js'></script>
+    </body>
+</html>

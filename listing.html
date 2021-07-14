@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+  <html lang="" id="html">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="icon" href="/favicon.ico">
+      <title>Listing</title>
+      <script src="./js/intersection-observer.js"></script>
+      <script src="./js/vue.js"></script>
+      <script src='./js/vue-swiper.js'></script>
+      <script src='./js/vue-awesome-swiper.js'></script>
+      <script src='./js/app.js'></script>
+      <script src='./js/moment-with-locales.min.js'></script>
+      <script src="./js/filter.js"></script>
+      <script src='./js/cards/endingDivider.js'></script>
+      <script src='./js/cards/divider.js'></script>
+      <script src='./js/cards/advertisement.js'></script>
+      <script src='./js/cards/standard.js'></script>
+      <script src='./js/cards/featuredVideo.js'></script>
+      <script src='./js/cards/featured.js'></script>
+      <script src="./js/cards/list-loading.js"></script>
+      <script src='./js/cards/item-type.js'></script>
+      <script src='./js/cards/horizontalThumbnailBase.js'></script>
+      <script src='./js/cards/horizontalThumbnail.js'></script>
+      <script src='./js/cards/horizontalThumbnailBaseFeature.js'></script>
+      <script src='./js/cards/horizontalThumbnailFeature.js'></script>
+      <script src='./js/cards/featuredStack.js'></script>
+      <script src='./js/cards/carousel-swiper.js'></script>
+      <script src="./js/vue-lazyload.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"/>
+      <!-- <link href="https://cdn.jsdelivr.net/npm/swiper@5.3.6/css/swiper.min.css"/> -->
+      <link rel="stylesheet" href="./css/carousel.css"/>
+      <link rel="stylesheet" href="https://www.ah5ivetheband.com/zaobao/css/tailwind.css" />
+    </head>
+    <body>
+      <div id="listing" :class="{ dark: isDark }">
+        <div id='listing-container'>
+          <div v-if="loading">
+            <list-loading v-for="n in 4" :key="n"></list-loading>
+          </div>
+          <section v-for="(card, cardIndex) in cards" :key="cardIndex">
+            <carousel-swiper v-if="card.cardType == 'Carousel'"  :items="card.items"></carousel-swiper>
+            <!-- <horizontalthumbnailfeature v-if="card.cardType == 'Carousel'"  :items="card.items"></horizontalthumbnailfeature> -->
+            <featuredstack v-if="card.cardType == 'Featured'" :items="card.items" ></featuredstack>
+            <standard v-if="card.cardType == 'Standard'" :post="post" :get-section-arry='getArticleArray' v-for="(post, index) in card.items" :key="index" :id="'standard '+ cardIndex"></standard>
+            <lazy-component v-if="card.cardType == 'Advertisement'" :id="'advertisement ' + cardIndex">
+              <advertisement :post="post" v-for="(post, itemIndex) in card.items" :key="itemIndex"></advertisement>
+            </lazy-component>
+            <div v-if="card.cardType == 'Advertisement'">
+              <div v-for="(post, itemIndex) in card.items" class="text-center bg-gray-50 ad-container dark:bg-gray-900">
+                <div class='px-8 py-3.5 text-center'>
+                 <h4 class="text-xs text-gray-600 pb-2">广告</p>
+                 <div :id="card.cardHash" class="newshub-container" :data-ads-unit-id="post.data.adUnitId" data-type="ads" :sizes="post.data.sizes | adSizeFormatter" style="height: 286px;" v-observe-visibility="visibilityChanged">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <horizontalthumbnail v-if="card.cardType == 'HorizontalThumbnail'" :items="card.items"></horizontalthumbnail>
+          </section>
+        </div>
+      </div>
+      <script src='./js/listing.js'></script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+/* multimedia page */
+
+.square {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  background: #4679BD;
+}
+
+.square::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.reduce-width {
+  /* width: 47%; */
+  width: 70.6%
+}
+
+.section-space {
+  margin-bottom: 1.1111rem;
+}
+
+.section-space .section-header {
+  margin-bottom: 0.8333rem;
+}
+
+.gradient-margin-top {
+  margin-top: 32%;
+  /* margin-top: 50%; */
+}
