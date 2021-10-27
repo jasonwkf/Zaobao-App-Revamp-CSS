@@ -62,6 +62,11 @@ body figure img {
   width: 100%;
 }
 
+body .image-placeholder {
+  max-width: 40%;
+  margin: 0 auto;
+}
+
 /* article content iframe */
 iframe {
   max-width: 100% !important;
