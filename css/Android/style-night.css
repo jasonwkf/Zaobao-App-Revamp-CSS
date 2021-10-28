@@ -165,9 +165,32 @@ body ol li a,
 body ul li a {
   color: #ff1339;
 }
+/* block quote */
+.article-content blockquote::before {
+  content: ' ';
+  width: 14%;
+  margin: 0 auto 15px;
+  height: 5px;
+  background-color: #a50034;
+  display: block;
+  border-radius: 5px;
+}
 
+.article-content blockquote::after {
+  content: ' ';
+  width: 14%;
+  margin: 15px auto 15px;
+  height: 5px;
+  background-color: #a50034;
+  display: block;
+  border-radius: 5px;
+}
+
+.article-content blockquote p {
+  font-weight: 500;
+}
 /* article content highlight */
-body .ZBO_Intro::before {
+/* body .ZBO_Intro::before {
   content: ' ';
   width: 14%;
   margin: 0 auto 15px;
@@ -190,7 +213,7 @@ body .ZBO_Intro::after {
 body .ZBO_Intro {
   font-size: 1.0556rem;
   color: white;
-}
+} */
 
 /* related article */
 body .inline-recommend {
