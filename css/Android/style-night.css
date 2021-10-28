@@ -62,9 +62,9 @@ body figure img {
   width: 100%;
 }
 
-body  .image-placeholder {
-  max-width: 40%;
-  margin: 0 auto;
+/* logo modification */
+body .image-placeholder:last-of-type img {
+  width: 40%;
 }
 
 /* article content iframe */
