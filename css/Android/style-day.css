@@ -76,12 +76,18 @@ body h3 {
   margin: 0;
 }
 
-body ul,
-body ol {
+body ul {
   padding: 0 0 1rem;
   color:#5f5f5f;
   font-size: inherit;
   list-style: inside;
+}
+
+body ol {
+  padding: 0 0 1rem;
+  color:#5f5f5f;
+  font-size: inherit;
+  /* list-style: inside; */
 }
 
 body ol li,
@@ -587,4 +593,3 @@ body .tiktok-container .tiktok-iframe {
     margin: 0 auto 1rem;
   }
 }
-

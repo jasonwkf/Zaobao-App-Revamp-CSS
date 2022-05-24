@@ -79,12 +79,18 @@ body h3 {
   margin: 0;
 }
 
-body ul,
-body ol {
+body ul {
   padding: 0 0 1rem;
   color: white;
   font-size: inherit;
   list-style: inside;
+}
+
+body ol {
+  padding: 0 0 1rem;
+  color: white;
+  font-size: inherit;
+  /* list-style: inside; */
 }
 
 body ol li,
