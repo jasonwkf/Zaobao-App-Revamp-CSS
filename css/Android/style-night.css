@@ -90,7 +90,8 @@ body ol {
   padding: 0 0 1rem;
   color: white;
   font-size: inherit;
-  /* list-style: inside; */
+  list-style: decimal;
+  list-style-position: inside;
 }
 
 body ol li,
